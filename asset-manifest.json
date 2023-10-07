@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/jrp-react-profile/static/js/main.a7b06749.chunk.js",
+    "main.js.map": "/jrp-react-profile/static/js/main.a7b06749.chunk.js.map",
+    "runtime-main.js": "/jrp-react-profile/static/js/runtime-main.bc46c5c0.js",
+    "runtime-main.js.map": "/jrp-react-profile/static/js/runtime-main.bc46c5c0.js.map",
+    "static/js/2.7ac8c9cc.chunk.js": "/jrp-react-profile/static/js/2.7ac8c9cc.chunk.js",
+    "static/js/2.7ac8c9cc.chunk.js.map": "/jrp-react-profile/static/js/2.7ac8c9cc.chunk.js.map",
+    "index.html": "/jrp-react-profile/index.html",
+    "static/js/2.7ac8c9cc.chunk.js.LICENSE.txt": "/jrp-react-profile/static/js/2.7ac8c9cc.chunk.js.LICENSE.txt",
+    "static/media/hospitalmanager.bdb8849e.png": "/jrp-react-profile/static/media/hospitalmanager.bdb8849e.png",
+    "static/media/kcc_logo.c3843bb1.svg": "/jrp-react-profile/static/media/kcc_logo.c3843bb1.svg",
+    "static/media/manoa_logo.078b45d7.svg": "/jrp-react-profile/static/media/manoa_logo.078b45d7.svg",
+    "static/media/mockatm.6a843d38.png": "/jrp-react-profile/static/media/mockatm.6a843d38.png",
+    "static/media/moku.ede2393b.png": "/jrp-react-profile/static/media/moku.ede2393b.png",
+    "static/media/paymark_logo.dda1f390.png": "/jrp-react-profile/static/media/paymark_logo.dda1f390.png",
+    "static/media/profile_pic.e60f50b7.jpg": "/jrp-react-profile/static/media/profile_pic.e60f50b7.jpg",
+    "static/media/site.92363e38.png": "/jrp-react-profile/static/media/site.92363e38.png",
+    "static/media/tetris.6d243f8f.png": "/jrp-react-profile/static/media/tetris.6d243f8f.png",
+    "static/media/worldline_logo.8b3f308a.png": "/jrp-react-profile/static/media/worldline_logo.8b3f308a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc46c5c0.js",
+    "static/js/2.7ac8c9cc.chunk.js",
+    "static/js/main.a7b06749.chunk.js"
+  ]
+}
