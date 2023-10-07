@@ -64,6 +64,7 @@ class SkillsSection extends PureComponent {
 					<SkillRating label="JavaScript/Typescript" rating={5} />
 					<SkillRating label="Java" rating={4} />
 					<SkillRating label="Python" rating={3} />
+					<SkillRating label="PHP" rating={4} />
 					<SkillRating label="HaXe" rating={5} />
 					<SkillRating label="C" rating={2} />
 					<SkillRating label="C++" rating={1} />
@@ -91,7 +92,7 @@ class SkillsSection extends PureComponent {
 				<SkillContainer title="Infrastructure / Cloud">
 					<SkillRating label="Octopus Deploy" rating={5} />
 					<SkillRating label="Gitlab CI/CD" rating={3} />
-					<SkillRating label="AWS" rating={2} />
+					<SkillRating label="AWS (in general)" rating={2} />
 				</SkillContainer>
 
 				<br />
