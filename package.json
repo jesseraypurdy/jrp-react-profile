@@ -1,0 +1,52 @@
+{
+  "name": "react-test",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://jesseraypurdy.github.io/jrp-react-profile",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2",
+    "@reach/router": "^1.2.1",
+    "axios": "^0.18.0",
+    "react-particles-js": "^2.7.0",
+    "react-pose": "^3.3.6",
+    "react-reveal": "^1.2.2",
+    "react-scroll": "^1.7.10",
+    "styled-components": "^4.0.0-beta.11.3",
+    "styled-system": "^3.1.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
