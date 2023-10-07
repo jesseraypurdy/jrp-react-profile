@@ -1,55 +1,37 @@
-import React, { PureComponent } from "react";
-import { HorizontalCard } from "components/Cards";
-import Section from "components/Section";
-import { Box, Link } from "kaila/Kaila";
-import Fade from "react-reveal/Fade";
 import moku_img from "assets/moku.png";
 import resume_img from "assets/site.png";
 import tetris_img from "assets/tetris.png";
-import mockatm_img from "assets/mockatm.png";
-import hospitalManager_img from "assets/hospitalmanager.png";
-// import typeScriptRoguelike_img from "assets/typeScriptRoguelike.png";
+import typeScriptRoguelike_img from "assets/typeScriptRoguelike.png";
+import { HorizontalCard } from "components/Cards";
+import Section from "components/Section";
+import { Box, Link } from "kaila/Kaila";
+import { PureComponent } from "react";
+import Fade from "react-reveal/Fade";
 
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>
 ///////////////////////////////////////////////////
 
-// const typeScriptRoguelike_page_url = "https://jrayp.github.io/TypeScriptRoguelike/";
-// const typeScriptRoguelike_src_url = "https://github.com/Jrayp/TypeScriptRoguelike";
-const hospitalManager_url = "https://github.com/Jrayp/HospitalManager";
-const mockatm_url = "https://github.com/Jrayp/Mock-ATM";
+const typeScriptRoguelike_page_url = "https://jrayp.github.io/TypeScriptRoguelike/";
+const roguelikeWikiLink = "https://en.wikipedia.org/wiki/Roguelike";
 const moku_url = "https://defold.com/assets/moku/";
 const tetris_url = "https://github.com/Jrayp/Neztris";
 const styledSystemURL = "https://github.com/jxnblk/styled-system";
-const padding = [4, 5];
+const padding = [ 4, 5 ];
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Links ] ...>>>
 ///////////////////////////////////////////////////
 
-// I could have created a generalized solution for this, and probably should
-
-// const typeScriptRoguelikePageLink = (
-// 	<Link href={typeScriptRoguelike_page_url} color="darkblue">
-// 		here
-// 	</Link>
-// );
-
-// const typeScriptRoguelikeSrcLink = (
-// 	<Link href={typeScriptRoguelike_src_url} color="darkblue">
-// 		roguelike engine
-// 	</Link>
-// );
-
-const hospitalManagerLink = (
-	<Link href={hospitalManager_url} color="darkblue">
-		Hospital Manager
+const roguelikeWikiPage = (
+	<Link href={roguelikeWikiLink} color="darkblue">
+		roguelike
 	</Link>
 );
 
-const mockatmLink = (
-	<Link href={mockatm_url} color="darkblue">
+const typeScriptRoguelikePageLink = (
+	<Link href={typeScriptRoguelike_page_url} color="darkblue">
 		here
 	</Link>
 );
@@ -77,64 +59,25 @@ const styledSystemLink = (
 ///////////////////////////////////////////////////
 
 class ProjectsSection extends PureComponent {
-	render() {
+	render () {
 		return (
 			<Section title="Personal Projects" gutterTop gutterBottom>
 
-				{/* <Fade bottom>
+				<Fade bottom>
 					<Box pb={padding}>
 						<HorizontalCard
-							title="TypeScript Roguelike - WIP"
+							title="TypeScript Roguelike"
 							subtitle="GameDev | TypeScript | 2021"
 							img={typeScriptRoguelike_img}
 							link={typeScriptRoguelikePageLink}
 						>
-							When I want to learn or practice something I typically do so by writing
-							something game related. Game programming allows me to really touch on many
-							areas of the tech in question, and most importantly: It's very fun! I'm currently
-							in the process of building a TypeScript powered {typeScriptRoguelikeSrcLink}{" "}
-							built on top of	the	Rot.js framework. It is very much a work in progress and a bit
-							of a mess now, but for a small weekend project, I'm not too fussed 😋. Run into some walls
-							{" "}{typeScriptRoguelikePageLink}.
-						</HorizontalCard>
-					</Box>
-				</Fade> */}
-
-				<Fade bottom>
-					<Box pb={padding}>
-						<HorizontalCard
-							title="Hospital Manager"
-							subtitle="C#/.Net | WinForms | SQL | 2019"
-							img={hospitalManager_img}
-							link={hospitalManager_url}
-						>
-							{hospitalManagerLink} is a much more advanced lessson in SQL Server than
-							Mock-ATM. This time I actually added some real functionality and
-							created a more interesting database that doesn't just act as a
-							container, but actually abstracts the relations between the patients
-							and doctors datasets. The app handles sorting and listing of patients and doctors,
-							displays and updates their relationships, can add and update patients,
-							and has a neat-o patient filter because why not.
-						</HorizontalCard>
-					</Box>
-				</Fade>
-
-				<Fade bottom>
-					<Box pb={padding}>
-						<HorizontalCard
-							title="Mock-ATM"
-							subtitle="C#/.Net | WinForms | SQL | 2019"
-							img={mockatm_img}
-							link={mockatm_url}
-						>
-							Ok ok.. You all want me to know some SQL, I get it. Mock-ATM
-							is a simple ATM simulator that I developed as a means
-							to learn some basic SQL Server. It reads from, and updates a
-							persistent database, and I have to admit.. I should have
-							started working with SQL a long time ago. I'm obviously just
-							scratching the surface with this, but it's a start. Oh, as a
-							side I also got to use Winforms (finally). Check it out{" "}
-							{mockatmLink}.
+							When I want to learn or practice something I typically do so
+							by writing something game related. Game-dev really allows me
+							to touch on many areas of the tech in question, and most importantly:
+							It's incredibly fun. I spent a few days developing a TypeScript powered
+							{" "}{roguelikeWikiPage} engine built on top of the Rot.js framework. It is very much a work in progress
+							and a bit of a mess now, but for a small weekend project, I'm not too fussed 😋. Most of
+							of my game-dev projects are not open source. This is one of the exceptions. Run into some walls {typeScriptRoguelikePageLink}.
 						</HorizontalCard>
 					</Box>
 				</Fade>
@@ -177,10 +120,8 @@ class ProjectsSection extends PureComponent {
 							React, and I handled the (small) back-end with
 							Node.js and Express. For styling I opted to use
 							styled-components and the fantastic{" "}
-							{styledSystemLink} package. This project has
-							taught me a LOT about web development. I'm happy to
-							have started, and finished it. 😊
-
+							{styledSystemLink} package. This project taught me a lot about web development.
+							I'm happy to have started, and finished it. 😊
 							Update: I have since moved this project to GitHub
 							Pages for ease of maintenance. The above still applies
 							though.
