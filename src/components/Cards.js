@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Flex, Box, Card, Image, Link } from "kaila/Kaila";
-import { Body, Heading } from "components/Text";
 import { CenterWidth } from "GlobalStyles";
+import { Body, Heading } from "components/Text";
+import { Box, Card, Flex, Image, Link } from "kaila/Kaila";
+import styled from "styled-components";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Styles ] ...>>>
@@ -34,21 +33,11 @@ const HorizCardImage = styled(Image)`
 // <<<... [ Component ] ...>>> //
 export const HorizontalCard = (props) => (
 	<Card width={CenterWidth}>
-		<Flex
-			alignItems={horizCardAlign}
-			justifyContent={horizCardJustify}
-			flexWrap="wrap"
-		>
+		<Flex alignItems={horizCardAlign} justifyContent={horizCardJustify} flexWrap="wrap">
 			<HorizCardImage src={props.img} width={horizCardImageWidth} />
 
 			<Box width={horizCardTextWidth} pt={horizCardTextPt}>
-				<Heading
-					as={CardLink}
-					href={props.link}
-					variant="h3"
-					color={titleColor}
-					gutter
-				>
+				<Heading as={CardLink} href={props.link} variant="h3" color={titleColor} gutter>
 					{props.title}
 				</Heading>
 				<Heading variant="h4" color={subtitleColor} gutter>

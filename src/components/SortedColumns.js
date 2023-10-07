@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import { Box, Flex } from "kaila/Kaila";
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Class ] ...>>>
@@ -16,18 +16,12 @@ class SortedColumns extends PureComponent {
 		this.children1.sort(this.sort);
 
 		// Splice the children array to handle responsiveness during render.
-		this.children2 = this.children1.splice(
-			Math.ceil(this.children1.length / 2)
-		);
+		this.children2 = this.children1.splice(Math.ceil(this.children1.length / 2));
 	}
 
 	column = (children) => {
 		return (
-			<Flex
-				flexDirection="column"
-				alignItems="center"
-				justifyContent="center"
-			>
+			<Flex flexDirection="column" alignItems="center" justifyContent="center">
 				{children}
 			</Flex>
 		);
@@ -44,11 +38,7 @@ class SortedColumns extends PureComponent {
 		const bSecond = b.props[second];
 
 		if (aFirst === bFirst) {
-			return aSecond < bSecond
-				? -secondAscending
-				: aSecond > bSecond
-					? secondAscending
-					: 0;
+			return aSecond < bSecond ? -secondAscending : aSecond > bSecond ? secondAscending : 0;
 		} else {
 			return aFirst > bFirst ? firstAscending : -firstAscending;
 		}
@@ -58,11 +48,7 @@ class SortedColumns extends PureComponent {
 		const columnWidth = this.props.columnWidth;
 		return (
 			<Box>
-				<Flex
-					alignItems="flex-start"
-					justifyContent="space-between"
-					flexWrap="wrap"
-				>
+				<Flex alignItems="flex-start" justifyContent="space-between" flexWrap="wrap">
 					<Box width={columnWidth}>{this.column(this.children1)}</Box>
 					<Box width={columnWidth}>{this.column(this.children2)}</Box>
 				</Flex>
@@ -82,11 +68,11 @@ SortedColumns.propTypes = {
 	second: PropTypes.string,
 	firstAscending: PropTypes.bool,
 	secondAscending: PropTypes.bool,
-	columnWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.array])
+	columnWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
 };
 
 SortedColumns.defaultProps = {
 	firstAscending: true,
 	secondAscending: true,
-	columnWidth: 1
+	columnWidth: 1,
 };

@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
-import styled from "styled-components";
 import Section from "components/Section";
-import { Flex, Box } from "kaila/Kaila";
 import { Body } from "components/Text";
+import { Flex } from "kaila/Kaila";
+import { PureComponent } from "react";
+import styled from "styled-components";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>

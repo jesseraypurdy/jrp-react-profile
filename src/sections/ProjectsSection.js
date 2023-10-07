@@ -8,7 +8,6 @@ import { Box, Link } from "kaila/Kaila";
 import { PureComponent } from "react";
 import Fade from "react-reveal/Fade";
 
-
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>
 ///////////////////////////////////////////////////
@@ -18,7 +17,7 @@ const roguelikeWikiLink = "https://en.wikipedia.org/wiki/Roguelike";
 const moku_url = "https://defold.com/assets/moku/";
 const tetris_url = "https://github.com/Jrayp/Neztris";
 const styledSystemURL = "https://github.com/jxnblk/styled-system";
-const padding = [ 4, 5 ];
+const padding = [4, 5];
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Links ] ...>>>
@@ -59,10 +58,9 @@ const styledSystemLink = (
 ///////////////////////////////////////////////////
 
 class ProjectsSection extends PureComponent {
-	render () {
+	render() {
 		return (
 			<Section title="Personal Projects" gutterTop gutterBottom>
-
 				<Fade bottom>
 					<Box pb={padding}>
 						<HorizontalCard
@@ -71,13 +69,13 @@ class ProjectsSection extends PureComponent {
 							img={typeScriptRoguelike_img}
 							link={typeScriptRoguelikePageLink}
 						>
-							When I want to learn or practice something I typically do so
-							by writing something game related. Game-dev really allows me
-							to touch on many areas of the tech in question, and most importantly:
-							It's incredibly fun. I spent a few days developing a TypeScript powered
-							{" "}{roguelikeWikiPage} engine built on top of the Rot.js framework. It is very much a work in progress
-							and a bit of a mess now, but for a small weekend project, I'm not too fussed 😋. Most of
-							of my game-dev projects are not open source. This is one of the exceptions. Run into some walls {typeScriptRoguelikePageLink}.
+							When I want to learn or practice something I typically do so by writing something game
+							related. Game-dev really allows me to touch on many areas of the tech in question, and most
+							importantly: It's incredibly fun. I spent a few days developing a TypeScript powered{" "}
+							{roguelikeWikiPage} engine built on top of the Rot.js framework. It is very much a work in
+							progress and a bit of a mess now, but for a small weekend project, I'm not too fussed 😋.
+							Most of my game-dev projects are not open source. This is one of the exceptions. Run into
+							some walls {typeScriptRoguelikePageLink}.
 						</HorizontalCard>
 					</Box>
 				</Fade>
@@ -90,15 +88,11 @@ class ProjectsSection extends PureComponent {
 							img={tetris_img}
 							link={tetris_url}
 						>
-							I've been wanting to try out Monogame with Nez and
-							decided a simple game would not only allow me to get
-							my hands dirty with the framework and engine, but
-							would also act as a way to showcase my proficiency
-							with C#/.Net. I wrote Neztris over the course of a
-							few days without the use of guides or tutorials,
-							while learning how Monogame and Nez work. With that
-							said this isn't a masterpiece. However, it is a
-							functional and even playable Tetris clone. So{" "}
+							I've been wanting to try out Monogame with Nez and decided a simple game would not only
+							allow me to get my hands dirty with the framework and engine, but would also act as a way to
+							showcase my proficiency with C#/.Net. I wrote Neztris over the course of a few days without
+							the use of guides or tutorials, while learning how Monogame and Nez work. With that said
+							this isn't a masterpiece. However, it is a functional and even playable Tetris clone. So{" "}
 							{neztrisLink} you have it!
 						</HorizontalCard>
 					</Box>
@@ -112,19 +106,13 @@ class ProjectsSection extends PureComponent {
 							img={resume_img}
 							link={tetris_url}
 						>
-							This site is my first web project. The development
-							process allowed me to get familiar with HTML5, CSS,
-							Javascript, and even some visual design.
-							Additionally, I learned about the deployment process
-							using Heroku. The front-end is built on top of
-							React, and I handled the (small) back-end with
-							Node.js and Express. For styling I opted to use
-							styled-components and the fantastic{" "}
-							{styledSystemLink} package. This project taught me a lot about web development.
-							I'm happy to have started, and finished it. 😊
-							Update: I have since moved this project to GitHub
-							Pages for ease of maintenance. The above still applies
-							though.
+							This site is my first web project. The development process allowed me to get familiar with
+							HTML5, CSS, Javascript, and even some visual design. Additionally, I learned about the
+							deployment process using Heroku. The front-end is built on top of React, and I handled the
+							(small) back-end with Node.js and Express. For styling I opted to use styled-components and
+							the fantastic {styledSystemLink} package. This project taught me a lot about web
+							development. I'm happy to have started, and finished it. 😊 Update: I have since moved this
+							project to GitHub Pages for ease of maintenance. The above still applies though.
 						</HorizontalCard>
 					</Box>
 				</Fade>
@@ -137,14 +125,10 @@ class ProjectsSection extends PureComponent {
 							img={moku_img}
 							link={moku_url}
 						>
-							Moku is an open source Map utility/module for the
-							Defold game engine. It was written as an exercise in
-							Lua, and provides out-of-the-box autotiling, as well
-							as powerful and efficient pathfinding. Complete
-							documentation is available. Moku was featured by
-							both the makers of Defold (King Games), as well as
-							Games From Scratch. Follow the {mokuLink} for a
-							demo!
+							Moku is an open source Map utility/module for the Defold game engine. It was written as an
+							exercise in Lua, and provides out-of-the-box autotiling, as well as powerful and efficient
+							pathfinding. Complete documentation is available. Moku was featured by both the makers of
+							Defold (King Games), as well as Games From Scratch. Follow the {mokuLink} for a demo!
 						</HorizontalCard>
 					</Box>
 				</Fade>

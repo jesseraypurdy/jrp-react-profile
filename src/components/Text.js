@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import { Heading as HeadingBase, Text } from "kaila/Kaila";
+import { Component } from "react";
 import styled from "styled-components";
-import { Text, Heading as HeadingBase } from "kaila/Kaila";
-import { fontSize, fontFamily, textAlign } from "styled-system";
+import { fontFamily, fontSize, textAlign } from "styled-system";
 
 // TODO: This is not how I want to do things. I am trying to come up with
 // a better/cleaner method of handling text, that works well with styled system,
-// but have not yet decided on anything. This is functional, but must be changed
+// but have not yet decided on anything. This is functional, but should be changed
 // in the future.
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -16,38 +16,38 @@ const headingMap = {
 	display3: {
 		fontSize: ["2em", "5em", "5em", "6em"],
 		// lineHeight: ["1.25em", null, "1.125em", "1.05em"],
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	display2: {
 		fontSize: ["2em", "4em", "4em", "5em"],
 		// lineHeight: ["1.25em", null, "1.125em", "1.05em"],
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	display1: {
 		fontSize: ["2em", "3em", "3em", "4em"],
 		// lineHeight: ["1.25em", null, "1.125em", "1.05em"],
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	h1: {
 		fontSize: ["2em", null, "2.5em", "3em"],
 		lineHeight: ["1.25em", null, "1.125em", "1.05em"],
-		weight: "bold"
+		weight: "bold",
 	},
 	h2: {
 		fontSize: ["1.625em", null, "2em", "2.25em"],
 		lineHeight: ["1.13636364em", null, "1.25em"],
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	h3: {
 		fontSize: ["1.375em", null, "1.5em", "1.75em"],
 		lineHeight: ["1.15384615em", null, "1.25em"],
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	h4: {
 		fontSize: ["1.125em"],
 		lineHeight: ["1.11111111em", null, "1.22222222em"],
-		fontWeight: "bold"
-	}
+		fontWeight: "bold",
+	},
 };
 
 export class Heading extends Component {
@@ -77,7 +77,7 @@ export class Heading extends Component {
 				{...headingMap[this.props.variant ? this.props.variant : "h3"]}
 				{...this.props}
 				css={{
-					textTransform: this.transform
+					textTransform: this.transform,
 				}}
 			>
 				{this.props.children}
@@ -108,13 +108,7 @@ export class Body extends Component {
 
 	render() {
 		return (
-			<Text
-				fontFamily="body"
-				fontSize={this.size}
-				lineHeight={this.lineHeight}
-				color="text1"
-				{...this.props}
-			>
+			<Text fontFamily="body" fontSize={this.size} lineHeight={this.lineHeight} color="text1" {...this.props}>
 				{this.props.children}
 			</Text>
 		);

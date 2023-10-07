@@ -11,14 +11,14 @@ import Fade from "react-reveal/Fade";
 // <<<... [ Constants ] ...>>>
 ///////////////////////////////////////////////////
 
-const padding = [ 4, 5 ];
+const padding = [4, 5];
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Class ] ...>>>
 ///////////////////////////////////////////////////
 
 class WorkHistorySection extends PureComponent {
-	render () {
+	render() {
 		return (
 			<Section title="Work History" gutterTop gutterBottom>
 				<Fade bottom>
@@ -28,13 +28,12 @@ class WorkHistorySection extends PureComponent {
 							subtitle=".Net Software Engineer | Jan 2020 - Nov 2021"
 							img={paymarkLogo}
 						>
-							Paymark is New Zealand's leading payments innovation company. My responsibilities
-							as a software engineer included, but were not limited to: Front and backend
-							feature development and maintenance of the monolithic Click web payments product.
-							Proxy and Java microservice maintenance. Automated test suite development, including
-							both UI automation and performance testing. Rotational on-call duties, and production
-							deployments. I was in a fairly large Scrum team and eventually led a platform
-							improvement initiative.
+							Paymark is New Zealand's leading payments innovation company. My responsibilities as a
+							software engineer included, but were not limited to: Front and backend feature development
+							and maintenance of the monolithic Click web payments product. Proxy and Java microservice
+							maintenance. Automated test suite development, including both UI automation and performance
+							testing. Rotational on-call duties, and production deployments. I was in a fairly large
+							Scrum team and eventually led a platform improvement initiative.
 						</HorizontalCard>
 					</Box>
 				</Fade>
@@ -45,12 +44,11 @@ class WorkHistorySection extends PureComponent {
 							subtitle="Senior Software Engineer | Nov 2021 - July  2022"
 							img={fergusLogo}
 						>
-							Fergus is New Zealand's #1 Job managment software. Over my time at Fergus I helped
-							maintain and build features for the platform, both front- and back-end. The primary
-							technologies I used here were Javascript/Typescript with React, PHP 7, MySQL as
-							well as some AWS services. I helped lead a team through timely completion of a critical
-							piece of work, and also helped lead the same team through an in-depth security review of
-							the entire system.
+							Fergus is New Zealand's #1 Job managment software. Over my time at Fergus I helped maintain
+							and build features for the platform, both front- and back-end. The primary technologies I
+							used here were Javascript/Typescript with React, PHP 7, MySQL as well as some AWS services.
+							I helped lead a team through timely completion of a critical piece of work, and also helped
+							lead the same team through an in-depth security review of the entire system.
 						</HorizontalCard>
 					</Box>
 				</Fade>

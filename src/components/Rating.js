@@ -1,11 +1,11 @@
-import React, { PureComponent } from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import { Flex, Box } from "kaila/Kaila";
 import { Label } from "components/Text";
+import { Box, Flex } from "kaila/Kaila";
+import PropTypes from "prop-types";
+import { PureComponent } from "react";
+import styled from "styled-components";
 
 /* TODO: This module needs to be generalized. For now it functions very well for my resume site,
-but is lacking in some customization (such as font-size), and it probably shouldn't be extending 
+but is lacking in some customization (such as font-size), and it probably shouldn't be extending
 labels. */
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -55,12 +55,7 @@ class Rating extends PureComponent {
 			if (rating > i && rating != null) selected = true;
 
 			this.icons.push(
-				<Icon
-					key={i}
-					color={
-						selected ? props.iconColor : props.emptyIconColor
-					}
-				>
+				<Icon key={i} color={selected ? props.iconColor : props.emptyIconColor}>
 					{props.icon}
 				</Icon>
 			);
@@ -92,7 +87,7 @@ Rating.propTypes = {
 	icon: PropTypes.string,
 	iconColor: PropTypes.string,
 	emptyIconColor: PropTypes.string,
-	hoverBg: PropTypes.string
+	hoverBg: PropTypes.string,
 	// fontSize: PropTypes.oneOfType([PropTypes.number, PropTypes.array])
 };
 
@@ -100,6 +95,6 @@ Rating.defaultProps = {
 	maxRating: 5,
 	icon: "★",
 	iconColor: "orange",
-	emptyIconColor: "#666"
+	emptyIconColor: "#666",
 	// fontSize: 5
 };

@@ -10,18 +10,18 @@ import styled from "styled-components";
 // <<<... [ Constants ] ...>>>
 ///////////////////////////////////////////////////
 
-const textBlockWidth = [ 1, 4 / 5, 1 / 3.2 ];
-const imageWidth = [ 4 / 5, 3 / 5, 1 / 5 ];
-const yMargins = [ 4, 5, 0 ];
+const textBlockWidth = [1, 4 / 5, 1 / 3.2];
+const imageWidth = [4 / 5, 3 / 5, 1 / 5];
+const yMargins = [4, 5, 0];
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Styles ] ...>>>
 ///////////////////////////////////////////////////
 
-const DropCapsBody = styled( Body )`
+const DropCapsBody = styled(Body)`
 	::first-letter {
-		color: ${( props ) => props.theme.colors.main};
-		text-shadow: ${( props ) => props.theme.shadows.text};
+		color: ${(props) => props.theme.colors.main};
+		text-shadow: ${(props) => props.theme.shadows.text};
 
 		float: left;
 		margin: 0.205em 0.153em 0 0;
@@ -41,7 +41,7 @@ const DropCapsBody = styled( Body )`
 // <<<... [ Subcomponents ] ...>>>
 ///////////////////////////////////////////////////
 
-const TextBlock = ( props ) => (
+const TextBlock = (props) => (
 	<Box width={textBlockWidth} my={yMargins}>
 		<DropCapsBody big>{props.children}</DropCapsBody>
 	</Box>
@@ -55,21 +55,15 @@ const TextBlock = ( props ) => (
 //		Clicking the portrait makes it spin and reveals something
 
 class GreetingSection extends PureComponent {
-	render () {
+	render() {
 		return (
 			<Section height={this.props.height}>
-				<Flex
-					flexDirection="row"
-					justifyContent="space-around"
-					alignItems="center"
-					flexWrap="wrap"
-					m="auto"
-				>
+				<Flex flexDirection="row" justifyContent="space-around" alignItems="center" flexWrap="wrap" m="auto">
 					<TextBlock>
-						I am a self-taught programmer, and mathematics graduate currently employed as a lead software engineer.
-						I bring confidence, resilience, passion, and attention to detail to the job, and pride myself in
-						being able to “get things done” in a timely and professional manner. I absolutely love working in
-						this field, and enjoy taking on challenging projects, and learning new things.
+						I am a self-taught programmer, and mathematics graduate currently employed as a lead software
+						engineer. I bring confidence, resilience, passion, and attention to detail to the job, and pride
+						myself in being able to “get things done” in a timely and professional manner. I absolutely love
+						working in this field, and enjoy taking on challenging projects, and learning new things.
 					</TextBlock>
 
 					<Box width={imageWidth} my={yMargins}>
@@ -80,10 +74,10 @@ class GreetingSection extends PureComponent {
 
 					<TextBlock>
 						<div>
-							This site was my first web project, and was initially created to act as a demonstration of my
-							ability	to pick up new skills before I had begun my career. No point in letting it go to waste
-							though, so I am keeping it updated as a digital resume of sorts.
-							Keep scrolling to find out more! &ensp;{" "}
+							This site was my first web project, and was initially created to act as a demonstration of
+							my ability to pick up new skills before I had begun my career. No point in letting it go to
+							waste though, so I am keeping it updated as a digital resume of sorts. Keep scrolling to
+							find out more! &ensp;{" "}
 							<span role="img" aria-label="Thumbs-Up">
 								👍
 							</span>

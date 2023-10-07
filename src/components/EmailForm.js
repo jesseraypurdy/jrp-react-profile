@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
-import styled from "styled-components";
 import { ButtonTrans } from "components/Buttons";
 import { Label } from "components/Text";
+import React, { PureComponent } from "react";
+import styled from "styled-components";
 import { fontSize } from "styled-system";
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -38,7 +38,7 @@ const FormStyle = styled.div`
 `;
 
 FormStyle.defaultProps = {
-	fontSize: ["1.15em", "1.25em"]
+	fontSize: ["1.15em", "1.25em"],
 };
 
 const SubmitInput = styled(ButtonTrans)`
@@ -90,14 +90,7 @@ class EmailForm extends PureComponent {
 		return (
 			<form id="email-form" ref={this.form} onSubmit={this.handleSubmit}>
 				<EmailLabel htmlFor="name">Name</EmailLabel>
-				<FormStyle
-					as="input"
-					id="name"
-					ref={this.name}
-					type="text"
-					placeholder="Your name..."
-					required
-				/>
+				<FormStyle as="input" id="name" ref={this.name} type="text" placeholder="Your name..." required />
 				<EmailLabel htmlFor="message">Message</EmailLabel>
 				<FormStyle
 					as="textarea"

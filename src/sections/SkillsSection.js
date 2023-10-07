@@ -12,14 +12,14 @@ import { withTheme } from "styled-components";
 // <<<... [ Constants ] ...>>>
 ///////////////////////////////////////////////////
 
-const columnWidth = [ 1, null, 9 / 20 ];
+const columnWidth = [1, null, 9 / 20];
 const hoverBg = "rgba(0, 0, 0, 0.05)";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Subcomponents ] ...>>>
 ///////////////////////////////////////////////////
 
-const SkillContainer = ( props ) => (
+const SkillContainer = (props) => (
 	<Fade bottom>
 		<Flex flexDirection="column" width={CenterWidth}>
 			<Heading variant="h3" color="accent1" gutter>
@@ -38,25 +38,20 @@ const SkillContainer = ( props ) => (
 	</Fade>
 );
 
-const skillRating = ( props ) => (
-	<Rating
-		iconColor={props.theme.colors.main}
-		emptyIconColor={props.theme.colors.text1}
-		hoverBg={hoverBg}
-		{...props}
-	>
+const skillRating = (props) => (
+	<Rating iconColor={props.theme.colors.main} emptyIconColor={props.theme.colors.text1} hoverBg={hoverBg} {...props}>
 		{props.children}
 	</Rating>
 );
 
-const SkillRating = withTheme( skillRating );
+const SkillRating = withTheme(skillRating);
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Class ] ...>>>
 ///////////////////////////////////////////////////
 
 class SkillsSection extends PureComponent {
-	render () {
+	render() {
 		return (
 			<Section title="Skills" gutterTop gutterBottom>
 				<SkillContainer title="Programming / Languages">
@@ -105,7 +100,6 @@ class SkillsSection extends PureComponent {
 					<SkillRating label="Agile - Kanban" rating={5} />
 					<SkillRating label="Teamwork" rating={5} />
 				</SkillContainer>
-
 			</Section>
 		);
 	}

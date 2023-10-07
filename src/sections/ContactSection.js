@@ -1,14 +1,14 @@
-import React, { PureComponent } from "react";
-import { Flex, Link, Box } from "kaila/Kaila";
-import styled from "styled-components";
-import Section from "components/Section";
-import { Heading } from "components/Text";
+import { Location, Router } from "@reach/router";
 import EmailForm from "components/EmailForm";
 import { Center } from "components/Misc";
-import { Router, Location, navigate } from "@reach/router";
+import Section from "components/Section";
+import { Heading } from "components/Text";
+import { Box, Flex, Link } from "kaila/Kaila";
+import { PureComponent } from "react";
 import posed, { PoseGroup } from "react-pose";
 import Fade from "react-reveal/Fade";
-import Zoom from 'react-reveal/Zoom';
+import Zoom from "react-reveal/Zoom";
+import styled from "styled-components";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>
@@ -55,7 +55,7 @@ const IconStyle = styled.svg`
 
 const RouteContainer = posed.div({
 	enter: { opacity: 1, delay: 300, beforeChildren: 300 },
-	exit: { opacity: 0 }
+	exit: { opacity: 0 },
 });
 
 const PosedRouter = (props) => (
@@ -105,18 +105,8 @@ const EmailIcon = (props) => (
 ///////////////////////////////////////////////////
 
 const Footer = (props) => (
-	<Flex
-		width="100%"
-		height={footerHeight}
-		justifyContent="center"
-		alignItems="center"
-		bg="darkShade1"
-	>
-		<Flex
-			width={footerIconFlexWidth}
-			justifyContent="space-around"
-			alignItems="center"
-		>
+	<Flex width="100%" height={footerHeight} justifyContent="center" alignItems="center" bg="darkShade1">
+		<Flex width={footerIconFlexWidth} justifyContent="space-around" alignItems="center">
 			<LinkedInIcon />
 			<GithubIcon />
 			<EmailIcon />
@@ -130,12 +120,12 @@ const Footer = (props) => (
 
 class ContactSection extends PureComponent {
 	state = {
-		display: "default"
+		display: "default",
 	};
 
 	isSubmitted = () => {
 		return this.state.display === "submitted";
-	}
+	};
 
 	onMessageSubmit = () => {
 		this.setState({ display: "submitted" });
@@ -172,17 +162,17 @@ class ContactSection extends PureComponent {
 			<Section noPadding>
 				<DisplayArea>
 					<Box width="100%">
-						{this.isSubmitted()
-							?
+						{this.isSubmitted() ? (
 							<Zoom>
 								<DisplayText />
 							</Zoom>
-							:
+						) : (
 							<Fade bottom>
 								<DisplayText />
 								<Box height="8vh" />
 								<DisplayEmail />
-							</Fade>}
+							</Fade>
+						)}
 					</Box>
 				</DisplayArea>
 				<Footer />

@@ -1,10 +1,10 @@
-import React, { PureComponent } from "react";
-import styled, { keyframes } from "styled-components";
 import Section from "components/Section";
 import { Heading } from "components/Text";
 import { Flex } from "kaila/Kaila";
-import Particles from 'react-particles-js';
-import ParticleConfig from 'particles.json';
+import ParticleConfig from "particles.json";
+import { PureComponent } from "react";
+import Particles from "react-particles-js";
+import styled, { keyframes } from "styled-components";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>
@@ -34,19 +34,19 @@ const ChevronAnim = keyframes`
 // <<<... [ Styles ] ...>>>
 ///////////////////////////////////////////////////
 
-const Background = styled( Flex )`
+const Background = styled(Flex)`
 	width: 100%;
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background: linear-gradient(-45deg, ${bgCol1 }, ${ bgCol2 });
+	background: linear-gradient(-45deg, ${bgCol1}, ${bgCol2});
 	z-index: 0;
 `;
 
-const HeadingShadow = styled( Heading )`
-	text-shadow: ${( props ) => props.theme.shadows.display };
+const HeadingShadow = styled(Heading)`
+	text-shadow: ${(props) => props.theme.shadows.display};
 `;
 
 const ButtonStyle = styled.button`
@@ -58,14 +58,14 @@ const ButtonStyle = styled.button`
 	background: transparent;
 	cursor: pointer;
 
-	animation: ${ChevronAnim } 1s linear infinite;
+	animation: ${ChevronAnim} 1s linear infinite;
 `;
 
 const ChevronStyle = styled.svg`
-	fill: ${chevronCol };
+	fill: ${chevronCol};
 `;
 
-const BannerParticles = styled( Particles )`
+const BannerParticles = styled(Particles)`
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -76,15 +76,9 @@ const BannerParticles = styled( Particles )`
 // <<<... [ Subcomponents ] ...>>>
 ///////////////////////////////////////////////////
 
-const ChevronButton = ( props ) => (
-	<ButtonStyle onClick={ () => props.scrollTo( "home" ) }>
-		<ChevronStyle
-			width="64"
-			height="64"
-			fill-rule="evenodd"
-			clip-rule="evenodd"
-			viewBox="0 0 24 24"
-		>
+const ChevronButton = (props) => (
+	<ButtonStyle onClick={() => props.scrollTo("home")}>
+		<ChevronStyle width="64" height="64" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24">
 			<path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
 		</ChevronStyle>
 	</ButtonStyle>
@@ -100,11 +94,9 @@ const ChevronButton = ( props ) => (
 class BannerSection extends PureComponent {
 	render() {
 		return (
-			<Section noPadding height={ this.props.height }>
+			<Section noPadding height={this.props.height}>
 				<Background>
-					<BannerParticles
-						params={ ParticleConfig }
-					/>
+					<BannerParticles params={ParticleConfig} />
 					<HeadingShadow variant="display3" color="white" gutter>
 						Hi! I'm Jesse.
 					</HeadingShadow>
@@ -112,7 +104,7 @@ class BannerSection extends PureComponent {
 						Welcome to my digital resume. Thanks for stopping by.
 					</Heading>
 				</Background>
-				<ChevronButton scrollTo={ this.props.scrollTo } />
+				<ChevronButton scrollTo={this.props.scrollTo} />
 			</Section>
 		);
 	}

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Button, Flex } from "kaila/Kaila";
 import { CenterWidth } from "GlobalStyles.js";
+import { Button, Flex } from "kaila/Kaila";
+import { Component } from "react";
+import styled from "styled-components";
 import { display } from "styled-system";
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -25,15 +25,12 @@ const Background = styled(Flex)`
 // Until I design a mobile navbar:
 // Only display navbar when viewport is wide enough.
 Background.defaultProps = {
-	display: ["none", null, "flex"]
+	display: ["none", null, "flex"],
 };
 
 const NavButtonStyle = styled(Button)`
 	font-family: ${(props) => props.theme.fonts.navBar};
-	color: ${(props) =>
-		props.current
-			? props.theme.colors.highlight2
-			: props.theme.colors.highlight1};
+	color: ${(props) => (props.current ? props.theme.colors.highlight2 : props.theme.colors.highlight1)};
 
 	font-size: 1.25em;
 	outline: none;
@@ -52,10 +49,7 @@ const NavButtonStyle = styled(Button)`
 ///////////////////////////////////////////////////
 
 const NavButton = (props) => (
-	<NavButtonStyle
-		current={props.current === props.id ? true : false}
-		onClick={() => props.scrollTo(props.id)}
-	>
+	<NavButtonStyle current={props.current === props.id ? true : false} onClick={() => props.scrollTo(props.id)}>
 		{props.id}
 	</NavButtonStyle>
 );
@@ -69,11 +63,7 @@ class NavBar extends Component {
 		return (
 			<StickyWrapper>
 				<Background alignItems="center" justifyContent="center">
-					<Flex
-						alignItems="center"
-						justifyContent="space-between"
-						width={CenterWidth}
-					>
+					<Flex alignItems="center" justifyContent="space-between" width={CenterWidth}>
 						<NavButton id="home" {...this.props} />
 						<NavButton id="skills" {...this.props} />
 						<NavButton id="work" {...this.props} />

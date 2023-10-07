@@ -1,9 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Flex } from "kaila/Kaila";
-import { Heading } from "components/Text";
 import { CenterWidth } from "GlobalStyles";
+import { Heading } from "components/Text";
+import { Flex } from "kaila/Kaila";
 import LightSpeed from "react-reveal/LightSpeed";
+import styled from "styled-components";
 
 //////////////////////////////////////////////////////////////////////////////////////
 // <<<... [ Constants ] ...>>>
