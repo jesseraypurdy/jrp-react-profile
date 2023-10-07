@@ -37,7 +37,7 @@ export const HorizontalCard = (props) => (
 			<HorizCardImage src={props.img} width={horizCardImageWidth} />
 
 			<Box width={horizCardTextWidth} pt={horizCardTextPt}>
-				<Heading as={CardLink} href={props.link} variant="h3" color={titleColor} gutter>
+				<Heading as={CardLink} href={props.link} target="_blank" variant="h3" color={titleColor} gutter>
 					{props.title}
 				</Heading>
 				<Heading variant="h4" color={subtitleColor} gutter>

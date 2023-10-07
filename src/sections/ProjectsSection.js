@@ -23,32 +23,34 @@ const padding = [4, 5];
 // <<<... [ Links ] ...>>>
 ///////////////////////////////////////////////////
 
+// TODO: Would be nice to generalize this
+
 const roguelikeWikiPage = (
-	<Link href={roguelikeWikiLink} color="darkblue">
+	<Link href={roguelikeWikiLink} target="_blank" color="darkblue">
 		roguelike
 	</Link>
 );
 
 const typeScriptRoguelikePageLink = (
-	<Link href={typeScriptRoguelike_page_url} color="darkblue">
+	<Link href={typeScriptRoguelike_page_url} target="_blank" color="darkblue">
 		here
 	</Link>
 );
 
 const neztrisLink = (
-	<Link href={tetris_url} color="darkblue">
+	<Link href={tetris_url} target="_blank" color="darkblue">
 		here
 	</Link>
 );
 
 const mokuLink = (
-	<Link href={moku_url} color="darkblue">
+	<Link href={moku_url} target="_blank" color="darkblue">
 		link
 	</Link>
 );
 
 const styledSystemLink = (
-	<Link href={styledSystemURL} color="darkblue">
+	<Link href={styledSystemURL} target="_blank" color="darkblue">
 		styled-system
 	</Link>
 );
@@ -67,7 +69,7 @@ class ProjectsSection extends PureComponent {
 							title="TypeScript Roguelike"
 							subtitle="GameDev | TypeScript | 2021"
 							img={typeScriptRoguelike_img}
-							link={typeScriptRoguelikePageLink}
+							link={typeScriptRoguelike_page_url}
 						>
 							When I want to learn or practice something I typically do so by writing something game
 							related. Game-dev really allows me to touch on many areas of the tech in question, and most
@@ -104,7 +106,6 @@ class ProjectsSection extends PureComponent {
 							title="Digital Resume"
 							subtitle="WebDev | React | Visual Design | 2018"
 							img={resume_img}
-							link={tetris_url}
 						>
 							This site is my first web project. The development process allowed me to get familiar with
 							HTML5, CSS, Javascript, and even some visual design. Additionally, I learned about the
