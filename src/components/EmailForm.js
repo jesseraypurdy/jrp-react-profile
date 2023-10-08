@@ -82,7 +82,7 @@ class EmailForm extends PureComponent {
 		const message = this.message.current.value;
 		const subject = `From '${name}' via react site`;
 
-		window.open(`mailto:jesseraypurdy@gmail.com?subject=${subject}&body=${message}`);
+		window.open(`mailto:jrayp.code@gmail.com?subject=${subject}&body=${message}`);
 		this.props.submitCallback();
 	}
 
